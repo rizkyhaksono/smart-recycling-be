@@ -1,34 +1,26 @@
 import express from "express";
-import dbConnection from "./dbConnection.js";
-import routes from "./routes/routes.js";
-const app = express();
-const port = process.env.PORT || 3000;
+import routes from "./app/routes/routes.js";
+import cors from "cors";
 
-// Middleware to parse JSON requests
+const app = express();
+const port = process.env.PORT || 4000;
+const host = process.env.HOST || "localhost";
+
+const corsOptions = {
+  origin: "*",
+  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Accept", "Origin"],
+};
+
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Go to /api");
 });
 
 app.use("/api", routes);
 
-app.use((err, req, res, next) => {
-  err.statusCode = err.statusCode || 500;
-  err.message = err.message || "Internal Server Error";
-  res.status(err.statusCode).json({
-    message: err.message,
-  });
+app.listen(port, () => {
+  console.log(`Server is running on port ${port} http://${host}:${port}`);
 });
-
-// If database is connected successfully, then run the server
-dbConnection
-  .getConnection()
-  .then(() => {
-    app.listen(port, () => {
-      console.log(`Server is running on port ${port} http://localhost:${port}`);
-    });
-  })
-  .catch((err) => {
-    console.log(`Failed to connect to the database: ${err.message}`);
-  });
