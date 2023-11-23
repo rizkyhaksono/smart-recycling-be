@@ -14,7 +14,22 @@ Smart Recycling APi using prisma and MySQL
 
 Test on [`POSTMAN`](https://www.postman.com/) or else.
 
-## Sign Up
+## Table of Endpoints
+
+| No. | Endpoints              | Method |
+| --- | ---------------------- | ------ |
+| 1   | /api/signup            | POST   |
+| 2   | /api/signin            | POST   |
+| 3   | /api/user              | GET    |
+| 4   | /api/events            | GET    |
+| 5   | /api/events            | POST   |
+| 6   | /api/reports           | GET    |
+| 7   | /api/reports           | POST   |
+| 8   | /api/exchange          | GET    |
+| 8   | /api/exchange/:user_id | GET    |
+| 8   | /api/exchange          | POST   |
+
+### Sign Up
 
 ```
 POST - http://localhost:4000/api/signup
@@ -44,7 +59,7 @@ Response:
 }
 ```
 
-## Sign In
+### Sign In
 
 ```
 
@@ -66,14 +81,14 @@ Response:
 }
 ```
 
-## Get User
+### Get User
 
 ```
 GET - http://localhost:4000/api/user
 Header - Authorization: "Bearer access_token"
 ```
 
-> EXAMPLE Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ5YjI4ODQ1LTdjOTMtNDA3YS1iNWYwLWQ3M2FhZGY1YmIwYyIsImlhdCI6MTcwMDcxODY1MSwiZXhwIjoxNzAwNzI5NDUxfQ.e58ZLrSeY8B3jRphjZ9-rLYH_c0V6whV_WVFbbDICKw
+> **EXAMPLE Bearer Token:** eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ5YjI4ODQ1LTdjOTMtNDA3YS1iNWYwLWQ3M2FhZGY1YmIwYyIsImlhdCI6MTcwMDcxODY1MSwiZXhwIjoxNzAwNzI5NDUxfQ.e58ZLrSeY8B3jRphjZ9-rLYH_c0V6whV_WVFbbDICKw
 
 Response:
 
@@ -89,7 +104,7 @@ Response:
 }
 ```
 
-## POST Events
+### POST Events
 
 ```
 POST - http://localhost:4000/api/events
@@ -119,4 +134,4 @@ Response:
 
 Credit to [Jody Yuantoro](https://github.com/xyzuan) and [Syauqi](https://github.com/syauqiamiq)
 
-[MIT LICENSE]()
+[MIT LICENSE](https://github.com/rizkyhaksono/smartrecycling-be/blob/main/LICENSE)
