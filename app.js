@@ -37,9 +37,11 @@ const options = {
     servers: [
       {
         url: `http://${host}:${port}`,
+        description: "prod",
       },
       {
         url: `http://localhost:4000/api-docs/`,
+        description: "dev",
       },
     ],
   },

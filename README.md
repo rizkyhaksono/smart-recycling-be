@@ -1,6 +1,6 @@
 # Smart Recycling API Docs
 
-Smart Recycling APi using prisma and MySQL
+Smart Recycling API using prisma and MySQL
 
 ## Installation
 
@@ -9,8 +9,6 @@ Smart Recycling APi using prisma and MySQL
 > yarn install
 
 > pnpm install
-
----
 
 Test on [`POSTMAN`](https://www.postman.com/) or else.
 

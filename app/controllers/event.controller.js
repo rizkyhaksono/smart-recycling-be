@@ -18,7 +18,6 @@ export const createEvent = async (req, res, next) => {
   try {
     const { title, description, path_image, user_id } = req.body;
 
-    // Use Prisma to create the event
     const createdEvent = await prisma.event.create({
       data: {
         title,
