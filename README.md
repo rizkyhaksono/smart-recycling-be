@@ -14,18 +14,19 @@ Test on [`POSTMAN`](https://www.postman.com/) or else.
 
 ## Table of Endpoints
 
-| No. | Endpoints              | Method |
-| --- | ---------------------- | ------ |
-| 1   | /api/signup            | POST   |
-| 2   | /api/signin            | POST   |
-| 3   | /api/user              | GET    |
-| 4   | /api/events            | GET    |
-| 5   | /api/events            | POST   |
-| 6   | /api/reports           | GET    |
-| 7   | /api/reports           | POST   |
-| 8   | /api/exchange          | GET    |
-| 8   | /api/exchange/:user_id | GET    |
-| 8   | /api/exchange          | POST   |
+| No. | Endpoints                                          | Method |
+| --- | -------------------------------------------------- | ------ |
+| 1   | https://api.smart-recycling.my.id/api/signup       | POST   |
+| 2   | https://api.smart-recycling.my.id/api/signin       | POST   |
+| 3   | https://api.smart-recycling.my.id/api/user         | GET    |
+| 4   | https://api.smart-recycling.my.id/api/user/points  | POST   |
+| 5   | https://api.smart-recycling.my.id/api/events       | GET    |
+| 6   | https://api.smart-recycling.my.id/api/events       | POST   |
+| 7   | https://api.smart-recycling.my.id/api/reports      | GET    |
+| 8   | https://api.smart-recycling.my.id/api/reports      | POST   |
+| 8   | https://api.smart-recycling.my.id/api/exchange     | GET    |
+| 8   | https://api.smart-recycling.my.id/api/exchange/:id | GET    |
+| 9   | https://api.smart-recycling.my.id/api/exchange     | POST   |
 
 ### Sign Up
 
