@@ -15,6 +15,7 @@ routes.post("/signin", authController.signIn);
 
 // user
 routes.get("/user", tokenValidation(), userController.getUser);
+routes.post("/user/points", userController.postPointByUserId);
 
 // events
 routes.get("/events", eventController.getEvent);

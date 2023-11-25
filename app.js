@@ -6,7 +6,7 @@ import swaggerui from "swagger-ui-express";
 
 const app = express();
 const port = process.env.PORT || 4000;
-const host = process.env.HOST || "localhost";
+const host = process.env.HOST || "https://api.smart-recycling.my.id/api-docs/";
 
 const corsOptions = {
   origin: "*",
@@ -36,11 +36,11 @@ const options = {
     },
     servers: [
       {
-        url: `http://${host}:${port}`,
+        url: `https://api.smart-recycling.my.id/api-docs/`,
         description: "prod",
       },
       {
-        url: `http://localhost:4000/api-docs/`,
+        url: `http://localhost:3000/api-docs/`,
         description: "dev",
       },
     ],
@@ -51,7 +51,7 @@ const options = {
 const specs = swaggerJSDoc(options);
 
 app.get("/", function (req, res) {
-  res.send(`<h2 style="display: flex; justify-content: center; align-items: center;"><a href='http://${host}:${port}/api-docs'>Go to Swagger UI </a></h2>`);
+  res.send(`<h2 style="display: flex; justify-content: center; align-items: center;"><a href='https://api.smart-recycling.my.id/api-docs/'>Go to Swagger UI </a></h2>`);
 });
 app.use("/api", routes);
 app.use("/api-docs", swaggerui.serve, swaggerui.setup(specs));
