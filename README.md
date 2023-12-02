@@ -24,9 +24,9 @@ Test on [`POSTMAN`](https://www.postman.com/) or else.
 | 6   | https://api.smart-recycling.my.id/api/events       | POST   |
 | 7   | https://api.smart-recycling.my.id/api/reports      | GET    |
 | 8   | https://api.smart-recycling.my.id/api/reports      | POST   |
-| 8   | https://api.smart-recycling.my.id/api/exchange     | GET    |
-| 8   | https://api.smart-recycling.my.id/api/exchange/:id | GET    |
-| 9   | https://api.smart-recycling.my.id/api/exchange     | POST   |
+| 9   | https://api.smart-recycling.my.id/api/exchange     | GET    |
+| 10  | https://api.smart-recycling.my.id/api/exchange/:id | GET    |
+| 11  | https://api.smart-recycling.my.id/api/exchange     | POST   |
 
 ### Sign Up
 
